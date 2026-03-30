@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LEFT IMAGE -->
+<div class="left">
+  <img src="b.avif" alt="image" class="left-img">
+
+  <!-- Logo as text -->
+  <div class="logo-left">LOGO</div>
+
+  <!-- Overlay text at bottom left -->
+  <div class="overlay-text">
+    <h2>Turn Your Ideas,<br>Into Visual Stories</h2>
+  </div>
+</div>
+
+  <!-- RIGHT FORM -->
+  <div class="right">
+
+    <!-- LOGIN -->
+    <div class="screen active" id="loginScreen">
+      <h2>Login</h2>
+
+      <input type="email" id="loginEmail" placeholder="Email"required>
+      <div class="password-container">
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <img src="eye.png" alt="Show password" class="toggle-password" onclick="togglePassword()">
+      </div>
+    
+      <div class="forgot">
+        <p onclick="showScreen('forgotScreen')">Forgot Password?</p>
+      </div>
+      <button onclick="login()">Login</button>
+        <p>
+        Don't have an account?
+        <span onclick="showScreen('registerScreen')">Register</span>
+      </p>
+
+      <div class="divider">
+        <span>OR</span>
+      </div>  
+
+      <div class="social-login">
+          <button class="social-btn">
+            <img src="google.png">
+            Continue with Google
+          </button>
+
+          <button class="social-btn">
+            <img src="facebook (2).png">
+            Continue with Facebook
+          </button>
+    </div>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="screen" id="registerScreen">
+      <h2>Create Account</h2>
+
+      <input type="text" id="regName" placeholder="Full Name" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+       <div class="password-container">
+        <input type="password" id="regPassword" placeholder="Password" required>
+        <img src="eye.png" alt="Show password" class="toggle-password" onclick="togglePassword()">
+      </div>
+       <div class="password-container">
+        <input type="password" id="regConfirm" placeholder="Confirm Password" required>
+        <img src="eye.png" alt="Show password" class="toggle-password" onclick="togglePassword()">
+      </div>
+     
+      <button onclick="register()">Create Account</button>
+
+       <div class="divider">
+        <span>OR</span>
+      </div>  
+
+      <div class="social-login">
+          <button class="social-btn">
+            <img src="google.png">
+            Continue with Google
+          </button>
+
+          <button class="social-btn">
+            <img src="facebook (2).png">
+            Continue with Facebook
+          </button>
+
+      <p>
+        Already have an account?
+        <span onclick="showScreen('loginScreen')">Login</span>
+      </p>
+    </div>
+
+   
+
+  </div>
+    <!-- FORGOT -->
+        <div class="screen" id="forgotScreen">
+        <h2>Reset Password</h2>
+        <input type="email" id="forgotEmail" placeholder="Email">
+        <div class="login-message" id="forgotMessage"></div>
+        <button onclick="resetPassword()">Send Reset Link</button>
+        <p onclick="showScreen('loginScreen')">Back to Login</p>
+      </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

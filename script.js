@@ -45,10 +45,10 @@ function togglePassword() {
 
   if (passwordInput.type === "password") {
     passwordInput.type = "text"; 
-    icon.src = "images/eye.png";    
+    icon.src = "eye.png";    
   } else {
     passwordInput.type = "password"; 
-    icon.src = "images/eyee.png";          
+    icon.src = "eyee.png";          
   }
 }
 
